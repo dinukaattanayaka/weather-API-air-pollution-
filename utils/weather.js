@@ -10,7 +10,8 @@ const getWeather = (lon, lat)=>{
             .then(function (response) {
                 // handle success
                 //console.log(response.data.list[0].components);
-                resolve({weather: "now" + response.data.list[0].components.co})
+                resolve( response.data.list[0].components)
+                // resolve({weather: response.data.list[0].components.co})
             })
                         .catch(function (error) {
                             // handle error
